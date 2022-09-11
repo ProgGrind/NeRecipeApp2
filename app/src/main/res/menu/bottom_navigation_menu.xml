@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_book_24"
+        android:title="@string/recipesBar"/>
+
+    <item
+        android:id="@+id/likeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_like_24"
+        android:title="@string/likesBar"/>
+
+    <item
+        android:id="@+id/filterFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_filter_24"
+        android:title="@string/filterBar"/>
+
+</menu>

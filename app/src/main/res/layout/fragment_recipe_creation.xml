@@ -1,0 +1,163 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/app_padding"
+    tools:context=".activity.RecipeCreationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnRecipeImage"
+                style="@style/icon_button"
+                android:src="@drawable/food"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/recipeImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/recipeName"
+                style="@style/textInputEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtRecipeDescription"
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtRecipeDescriptionInput"
+                style="@style/textInputEditText"
+                android:maxLines="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtTime"
+            style="@style/fullWidthTextInputLayout"
+            app:suffixText="Minutes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtTimeInput"
+                style="@style/textInputEditText"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding_more" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtRecipe"
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/recipeEnterField"
+                android:inputType="textMultiLine"
+                style="@style/textInputEditText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/section_title"
+            android:text="@string/types" />
+        <RadioGroup
+            android:id="@+id/categoryRecipeCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/checkboxEu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/european" />
+            <RadioButton
+                android:id="@+id/checkboxAs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/asian" />
+            <RadioButton
+                android:id="@+id/checkboxPa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panasian" />
+            <RadioButton
+                android:id="@+id/checkboxOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oriental" />
+            <RadioButton
+                android:id="@+id/checkboxUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/american" />
+            <RadioButton
+                android:id="@+id/checkboxRu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/russian" />
+            <RadioButton
+                android:id="@+id/checkboxMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mediterranean" />
+        </RadioGroup>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateRecipe"
+            style="@style/fullWidthButton"
+            android:text="@string/create_recipe" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="@dimen/app_padding" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            style="@style/fullWidthButton"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+</ScrollView>
